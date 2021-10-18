@@ -8,6 +8,8 @@
 	--our-team-list-item-background: #ffffff;
 	--secondary-title-color: #ffffff;
 	--footer-link-color: #ffffff99;
+	--header-border: #ececec;
+	--portfolio-list-card-border: #eeeeee;
 }
 
 p,
@@ -50,6 +52,10 @@ body {
 	margin: 0 auto;
 }
 
+.section {
+	padding: 94px 0;
+}
+
 .list {
 	list-style: none;
 }
@@ -61,6 +67,7 @@ body {
 .btn {
 	cursor: pointer;
 	font-family: inherit;
+	border: none;
 }
 
 .btn-light {
@@ -74,12 +81,12 @@ body {
 /*----------Header----------*/
 .header {
 	color: var(--primary-text-color);
+	border-bottom: 1px solid var(--header-border);
 }
 
 .header-container {
 	display: flex;
 	justify-content: space-between;
-	padding: 24px 0 25px;
 }
 
 .header-logo {
@@ -119,11 +126,13 @@ body {
 }
 
 .menu-link {
+	display: block;
 	font-weight: 500;
 	font-size: 14px;
-	line-height: 1.14;
+	line-height: 1.15;
 	letter-spacing: 0.02em;
 	color: var(--primary-text-color);
+	padding: 32px 0;
 }
 
 .menu-link:hover,
@@ -142,18 +151,20 @@ body {
 
 .header-mail,
 .header-tel {
+	display: block;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	color: var(--secondary-text-color);
+	padding: 32px 0;
 }
 
 .header-mail:hover,
 .header-mail:focus,
 .header-tel:hover,
 .header-tel:focus,
-.menu-current {
+.nav-list .current {
 	color: var(--accent-color);
 }
 
@@ -202,11 +213,6 @@ body {
 }
 
 /*----------Advantages----------*/
-
-.advantages {
-	padding: 94px 0;
-}
-
 .advantages-list {
 	display: flex;
 }
@@ -234,7 +240,7 @@ body {
 
 /*----------What we do----------*/
 .what-we-do {
-	padding-bottom: 94px;
+	padding: 0;
 }
 
 .what-we-do-title {
@@ -261,12 +267,6 @@ body {
 }
 
 /*----------Our team----------*/
-
-.our-team {
-	background-color: var(--our-team-section-background);
-	padding: 94px 0;
-}
-
 .our-team-title {
 	font-weight: 700;
 	font-size: 36px;
@@ -356,9 +356,24 @@ body {
 }
 
 /*----------Portfolio----------*/
+.portfolio-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 50px;
+}
 
-.portfolio-title {
-	display: none;
+.portfolio-list-cards {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -30px;
+	margin-bottom: -30px;
+}
+
+.portfolio-list-card {
+	flex-basis: calc(100% / 3 - 30px);
+	margin-left: 30px;
+	margin-bottom: 30px;
 }
 
 .portfolio-btn {
@@ -370,6 +385,11 @@ body {
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: var(--primary-text-color);
+	padding: 6px 22px;
+}
+
+.portfolio-list-item:not(:last-child) {
+	margin-right: 8px;
 }
 
 .portfolio-btn:hover,
@@ -391,4 +411,15 @@ body {
 	line-height: 1.87;
 	letter-spacing: 0.03em;
 	color: var(--secondary-text-color);
+}
+
+.portfolio-list-card-text {
+	padding: 0 24px 20px;
+	border-left: 1px solid var(--portfolio-list-card-border);
+	border-right: 1px solid var(--portfolio-list-card-border);
+	border-bottom: 1px solid var(--portfolio-list-card-border);
+}
+
+.portfolio-list-card-img {
+	display: block;
 }
